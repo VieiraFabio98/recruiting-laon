@@ -3,3 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #1F1D2F;
+}
+
+body, input, textarea, select, button {
+  font: 400 1rem "Inter", sans-serif;
+}
