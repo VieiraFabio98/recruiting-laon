@@ -1,0 +1,47 @@
+.registerContainer {
+  width: 588px;
+  height: 535px;
+  background: #282639;
+  margin-top: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 0rem 0rem 6rem;
+}
+
+.h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #B5B3CB;
+  margin-bottom: 32px;
+}
+
+.inputForm {
+  width: 384px;
+  height: 72px;
+  margin-bottom: 24px;
+  border: 1px solid #48465B;
+  border-radius: 10px;
+  padding: 24px 0px 24px 24px;
+  background: transparent;
+  outline: none;
+  color: #FFFFFF;
+}
+
+.buttonForm {
+  width: 384px;
+  height: 72px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  border: 1px solid #48465B;
+  &:hover {
+    filter: brightness(0.9);
+  }
+  transition: filter 0.2s;
+}

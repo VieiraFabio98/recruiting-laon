@@ -1,16 +1,13 @@
 import { useState } from 'react'
 import styles from './styles.module.scss'
 
-export function Register() {
-
-  const [name, setName] = useState('')
+export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const handleSubmit = async (event: any) => {
     event.preventDefault()
     const payload = {
-      name: name,
       email: email,
       password: password,
     }
@@ -31,19 +28,9 @@ export function Register() {
 
   return(
     <div className={styles.registerContainer}>
-      <h1 className={styles.h1}>Cadastre-se</h1>
-      <p className={styles.p}>Acompanhe os melhores filmes e séries.</p>
+      <h1 className={styles.h1}>Entrar</h1>
+      <p className={styles.p}>Bem vindo(a) de volta!</p>
       <form onSubmit={handleSubmit}>
-        <div>
-          <input 
-            className={styles.inputForm} 
-            type="text" 
-            placeholder="Nome" 
-            name='name'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            />
-        </div>
         <div>
           <input 
             className={styles.inputForm}  
@@ -64,8 +51,7 @@ export function Register() {
             onChange={(e) => setPassword(e.target.value)}
             />
         </div>
-        <p className={styles.pForm}>Ao clicar em cadastrar, você está aceitando os Termos e Condições e a Política de Privacidade da Laon.</p>
-        <button className={styles.buttonForm} type="submit">Cadastrar</button>
+        <button className={styles.buttonForm} type="submit">Entrar</button>
       </form>
     </div>
   )
