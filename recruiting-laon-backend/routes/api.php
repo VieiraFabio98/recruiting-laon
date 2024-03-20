@@ -29,3 +29,4 @@ Route::put("update-categorie/{id}", [CategorieController::class, 'update']);
 
 //User Routes
 Route::post("register-user", [UserController::class, 'store']);
+Route::post("login-user", [UserController::class, 'login']);

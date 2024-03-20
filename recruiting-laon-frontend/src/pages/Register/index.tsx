@@ -8,13 +8,14 @@ export function Register() {
   const [password, setPassword] = useState('')
 
   const handleSubmit = async (event: any) => {
+    console.log(name, email, password)
     event.preventDefault()
     const payload = {
       name: name,
       email: email,
+      password: password,
     }
     
-    console.log(process.env.BASEURL)
     const response = await fetch(`http://localhost:8000/api/register-user`, {
       method: 'POST',
       headers: {

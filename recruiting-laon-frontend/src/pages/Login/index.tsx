@@ -1,9 +1,16 @@
 import { useState } from 'react'
 import styles from './styles.module.scss'
+import { useRouter } from 'next/router'
 
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  const router = useRouter()
+
+  function handleNavigate(route: string) {
+    router.push(route)
+  }
 
   const handleSubmit = async (event: any) => {
     event.preventDefault()
@@ -12,16 +19,18 @@ export default function Login() {
       password: password,
     }
 
-    const response = await fetch('http://localhost:8000/api/register-user', {
+    const response = await fetch('http://localhost:8000/api/login-user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(payload),
     })
-
-    if(response.status === 201) {
-      alert('Cadastro realizado com sucesso!')
+    
+    const responseData = await response.json()
+    
+    if(responseData.status === '200') {
+      handleNavigate('Movies')
     }
 
   }
