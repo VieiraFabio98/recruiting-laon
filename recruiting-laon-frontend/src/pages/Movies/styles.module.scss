@@ -1,0 +1,31 @@
+.pageTitle {
+  font-size: 40px;
+  color: #FFFFFF;
+  font-weight: 600;
+  margin-left: 120px;
+  margin-top: 52px;
+  margin-bottom: 40px;
+}
+
+.contentContainer {
+  width: 1220px;
+  height: 312px;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.label {
+  color: #B5B3CB;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.body {
+  content: "";
+  position: absolute;
+  background: #282639;
+  top: 0;
+  bottom: 0;
+  height: 378px;
+  z-index: -1;
+}
